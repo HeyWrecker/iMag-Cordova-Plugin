@@ -5,7 +5,7 @@
  */
 var exec = require('cordova/exec');
 
-var imag = {
+var Reader = {
     start: function (resultHandler, errorHandler) {
         exec(function (result) {
             imag.start(resultHandler, errorHandler);
