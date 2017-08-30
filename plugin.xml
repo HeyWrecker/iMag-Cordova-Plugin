@@ -3,9 +3,51 @@
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     id="com.github.deboorn.imag-cordova-plugin"
     version="0.1.0">
+
     <name>iMagPlugin</name>
+
+    <description>Cordova Plugin for iMag Pro.</description>
+
+    <repo>https://github.com/HeyWrecker/iMag-Cordova-Plugin.git</repo>
+
+    <keyword>idtech, imag, swiper, card reader, credit card</keyword>
+
+    <license>CC BY 4.0</license>
+
+    <author>Daniel Boorn</author>
+
+    <!-- cordova -->
+    <engines>
+	  <engine name="cordova" version=">=3.5.0"/>
+    </engines>
+
+    <!-- js -->
+	<js-module src="www/iMagPlugin.js" name="UniMag-Swiper">
+		<clobbers target="cordova.plugins.imag.reader" />
+	</js-module>
+
     <!-- ios -->
-    <platform name="ios">
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+            <feature name="iMagReader">
+                <param name="ios-package" value="iMagReader" />
+            </feature>
+        </config-file>
+
+		<source-file src="src/ios/libiMagSDK.a" framework="true" />
+
+		<header-file src="src/ios/iMag.h" />
+
+		<header-file src="src/ios/iMagPlugin.h" />
+		<source-file src="src/ios/iMagPlugin.m" />
+
+        <framework src="ExternalAccessory.framework" />
+	</platform>
+
+
+
+    <!-- ios -->
+    <!-- <platform name="ios">
         <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
             <array>
                 <string>com.idtechproducts.reader</string>
@@ -24,5 +66,5 @@
         <header-file src="src/ios/iMag.h" />
         <source-file framework="true" src="src/ios/libiMagSDK.a" />
         <framework src="ExternalAccessory.framework" />
-    </platform>
+    </platform> -->
 </plugin>

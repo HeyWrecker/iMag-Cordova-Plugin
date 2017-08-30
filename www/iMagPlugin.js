@@ -20,4 +20,4 @@ var imag = {
     }
 };
 
-module.exports = imag;
+module.exports = Reader;
