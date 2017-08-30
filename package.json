@@ -1,0 +1,25 @@
+{
+  "name": "com.deboorn.cordova.plugin.imag-cordova-plugin",
+  "version": "0.1.0",
+  "description": "iMag Pro Cordova Plugin for use with iMag Pro Mobile MagStripe Reader for iOS.",
+  "cordova": {
+    "id": "com.deboorn.cordova.plugin.imag-cordova-plugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeyWrecker/iMag-Cordova-Plugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Daniel Boorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeyWrecker/iMag-Cordova-Plugin/issues"
+  },
+  "homepage": "https://github.com/HeyWrecker/iMag-Cordova-Plugin#readme"
+}
