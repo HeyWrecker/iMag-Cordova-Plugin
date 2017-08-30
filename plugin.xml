@@ -28,9 +28,15 @@
 
     <!-- ios -->
 	<platform name="ios">
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.idtechproducts.reader</string>
+            </array>
+        </config-file>
+
 		<config-file target="config.xml" parent="/*">
-            <feature name="iMagReader">
-                <param name="ios-package" value="iMagReader" />
+            <feature name="iMagPlugin">
+                <param name="ios-package" value="iMagPlugin" />
             </feature>
         </config-file>
 
